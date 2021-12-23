@@ -10,7 +10,6 @@ This is a solution to the [Space tourism website challenge on Frontend Mentor](h
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
 
@@ -27,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://eager-easley-85f589.netlify.app/index.html
 
 ## My process
 
@@ -38,6 +37,8 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
+- scss
+- js
 
 
 
@@ -45,11 +46,6 @@ Users should be able to:
 
 The important thing I learn is how to convert the design system to a strong css base that will help in building the website more easier.
 
-
-## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 
 ## Acknowledgments
