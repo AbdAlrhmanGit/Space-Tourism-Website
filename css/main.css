@@ -7,24 +7,6 @@
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
   /* font sizes */
-  /* the font sizes that we have in design system are for large screen  so we break our font size values to levels 
-   from smaller 200 to bigger 900 and we use rem not px for better accessibility
-   --fs-900: 9.375rem;
-   --fs-800: 6.25rem;
-   --fs-700: 3.5rem;
-   --fs-600: 2rem;
-   --fs-500: 1.75rem;
-   --fs-400: 1.125rem;
-   --fs-300: 1rem;
-   --fs-200: 0.875rem;
-   next we will see our design and see the change that happend in font size of elemnts from descktop to taplet to phone
-   and we will have conclusion that  mustly elemnts that have  --fs-900 lvalue ta3o kt7awel men 9.3 descktop to 5 f 
-   lphone and so on with --fs800... so what will do is just change the value of --fs custom properties in tablet
-   and descktop and we will intail it with the phone sizes so for matalan --fs-900 : 5 => 5 => 9.375
-   that will help us to do not change the element font size, just the custom property will automaticly changed --fs 
-   and bach tkhdem bhad technique khas takhed chi 9ararat bnisba lfs o tad7iyat 7it l elements maghaykounch 3andhom 100%
-   fs li kiyn f design.
-   */
   --fs-900: clamp(5rem, 8vw + 1rem, 9.375rem);
   --fs-800: clamp(3.5rem, 8vw + 1rem, 6.25rem);
   --fs-700: clamp(1.5rem, 3vw + 0.8rem, 3.5rem);
@@ -848,7 +830,10 @@ select {
   --flow-space: 2rem;
   -ms-flex-line-pack: start;
       align-content: start;
-      grid-template-areas: "title" "image" "indicators" "article";
+      grid-template-areas: "title"
+ "image"
+ "indicators"
+ "article";
 }
 
 .crew .grid-container > .numbered-title {
@@ -895,7 +880,10 @@ select {
 @media (min-width: 35em) {
   .crew .grid-container {
     --flow-space: 2.5rem;
-        grid-template-areas: "title" "article" "indicators" "image";
+        grid-template-areas: "title"
+ "article"
+ "indicators"
+ "image";
   }
   .crew .grid-container .numbered-title {
     -ms-grid-column-align: start;
@@ -918,7 +906,9 @@ select {
         grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 17rem) minmax(1rem, 1fr);
     --flow-space: 0rem;
     justify-items: flex-start;
-        grid-template-areas: ". title image ." ". article image ." ". indicators image .";
+        grid-template-areas: ". title image ."
+ ". article image ."
+ ". indicators image .";
   }
   .crew .grid-container .image {
     grid-column: span 2;
@@ -962,7 +952,9 @@ select {
       align-content: start;
   -ms-grid-columns: 1rem 1fr 1rem;
       grid-template-columns: 1rem 1fr 1rem;
-      grid-template-areas: ". title ." "image image image" ". informations .";
+      grid-template-areas: ". title ."
+ "image image image"
+ ". informations .";
 }
 
 .techno .grid-container > .numbered-title {
@@ -1027,7 +1019,8 @@ select {
     justify-items: left;
     -ms-grid-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 15rem) minmax(1rem, 1fr);
         grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 15rem) minmax(1rem, 1fr);
-        grid-template-areas: ". title title ." ". informations image image";
+        grid-template-areas: ". title title ."
+ ". informations image image";
   }
   .techno .grid-container > .informations {
     padding-right: 1rem;
