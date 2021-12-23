@@ -1,0 +1,22 @@
+.home {
+   // backround images
+   // mobile
+   background-size: cover;
+   background-position: bottom center;
+   background-image: url(../assets/home/background-home-mobile.jpg);
+   // taplet
+   @media (min-width: 35em) {
+      background-position: center;
+      background-image: url(../assets/home/background-home-tablet.jpg);
+   }
+   // descktop
+   @media (min-width: 45em) {
+      background-image: url(../assets/home/background-home-desktop.jpg);
+
+      .grid-container.grid-container--home {
+         padding-bottom: #{"max(6rem, 20vh)"};
+         align-items: end;
+      }
+   }
+
+}

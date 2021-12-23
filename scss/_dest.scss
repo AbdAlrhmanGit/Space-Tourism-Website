@@ -1,0 +1,68 @@
+.dist {
+   // backround images
+   // mobile
+   background-size: cover;
+   background-position: center;
+   background-image: url(../assets/destination/background-destination-mobile.jpg);
+   // taplet
+   @media (min-width: 35em) {
+      // background-position: center;
+      background-image: url(../assets/destination/background-destination-tablet.jpg);
+   }
+   // descktop
+   @media (min-width: 45em) {
+      background-image: url(../assets/destination/background-destination-desktop.jpg);
+
+   }
+
+   .grid-container {
+      align-content: start;
+      
+      @media (min-width: 35rem) and (max-width: 45rem) {
+         & .full-Width-Child {
+            justify-self: stretch;
+            max-width: 100%;
+            & > :first-child {
+               text-align: left;
+            }
+         }
+      }
+      section:first-child {
+         align-self: flex-start;
+         --flow-space: clamp(2rem, 7.5vw, 6rem );
+
+         .planet-img {
+            max-width: clamp(10.625rem, 40vw, 27.81rem);
+            margin-inline: auto;
+         }
+      }
+      .info {
+         --gap: 1rem;
+         justify-content: center;
+         flex-direction: column;
+         padding-top: 1.75rem;
+         border-top: 1px solid #{"hsl( var(--clr-light) / .2 )"};
+         margin-block: 1rem 2rem;
+         @media (min-width: 35rem) {
+            flex-direction: row;
+            justify-content: space-evenly;
+            --gap: 0;
+         }
+         @media (min-width: 45rem) {
+            --gap: clamp(1rem, 5vw,4.93rem);
+            justify-content: start;
+            margin-block: 1rem 0;
+            & > * {
+               text-align: left;
+            }
+         }
+         &_haeder {
+            font-size: 0.875rem;
+         }
+         &_content {
+            font-size: 1.5rem;
+            line-height: 2rem;
+         }
+      }
+   }
+}

@@ -1,0 +1,105 @@
+.crew {
+   // backround images
+   // mobile
+   background-size: cover;
+   background-position: center;
+   background-image: url(../assets/crew/background-crew-mobile.jpg);
+   // taplet
+   @media (min-width: 35em) {
+      background-image: url(../assets/crew/background-crew-tablet.jpg);
+   }
+   // descktop
+   @media (min-width: 45em) {
+      background-image: url(../assets/crew/background-crew-desktop.jpg);
+   }
+
+   .grid-container {
+      --container-gap:1rem;
+      --flow-space: 2rem;
+      align-content: start;
+      grid-template-areas: 
+      "title"
+      "image"
+      "indicators"
+      "article"
+      ;
+      & > .numbered-title {
+         grid-area: title;
+      }
+      & > article {
+         grid-area: article;
+
+         & > :first-child {
+            margin-bottom: .5rem;
+            color: #{"hsl( var(--clr-white) / .5 )"};
+         }
+         & > :last-child {
+            margin-block: 1rem 3rem;
+         }
+      }
+      & > .dot-indicators {
+         grid-area: indicators;
+      }
+      & > .image {
+         border-bottom: 1px solid #{"hsl( var(--clr-light) / .1 )"};
+         justify-self: stretch !important;
+         grid-area: image;
+         img {
+            margin: auto;
+            max-height: 19.9rem;
+         }
+      }
+
+      @media (min-width: 35em) {
+         --flow-space: 2.5rem;
+         .numbered-title {
+            justify-self: start;
+         }
+         grid-template-areas: 
+         "title"
+         "article"
+         "indicators"
+         "image"
+         ;
+         .image {
+            border: none;
+            img {
+               max-height:#{'max(100vh - 28.687rem, 16.875rem)'};
+            }
+         }
+         & > article {
+            & > :last-child {
+               margin-block: 1rem 0;
+            }
+         }
+      }
+      @media (min-width: 45em) {
+         grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 17rem) minmax(1rem, 1fr);
+         --flow-space: 0rem;
+         justify-items: flex-start;
+         grid-template-areas: 
+         ". title image ."
+         ". article image ."
+         ". indicators image ."
+         ;
+         
+         .image {
+            grid-column: span 2;
+            img {
+               max-height:#{'max(100vh - 9.687rem, 22.69rem)'};
+            }
+         }
+         & > article {
+            & > :first-child {
+               margin-bottom: 1rem;
+            }
+            & > :last-child {
+               margin-top: 1.69rem;
+            }
+         }
+         .dot-indicators {
+            margin-top: 12px;
+         }
+      }
+   }
+}

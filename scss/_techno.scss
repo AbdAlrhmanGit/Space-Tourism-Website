@@ -1,0 +1,89 @@
+.techno {
+   // backround images
+   // mobile
+   background-size: cover;
+   background-position: center;
+   background-image: url(../assets/technology/background-technology-mobile.jpg);
+   // taplet
+   @media (min-width: 35em) {
+      background-image: url(../assets/technology/background-technology-tablet.jpg);
+   }
+   // descktop
+   @media (min-width: 45em) {
+      background-image: url(../assets/technology/background-technology-desktop.jpg);
+   }
+
+   .grid-container {
+      --flow-space: 2rem;
+      padding: 0 0 4rem 0;
+      align-content: start;
+      grid-template-columns: 1rem 1fr 1rem;
+      grid-template-areas: 
+      ". title ."
+      "image image image"
+      ". informations ."
+      ;
+      & > .numbered-title {
+         grid-area: title;
+      }
+      & > .image {
+         grid-area: image;
+         justify-self: end;
+      }
+      & > .informations {
+         grid-area: informations;
+         .numbers {
+            justify-content: center;
+            --flow-space: 0;
+         }
+         & > article {
+            margin-top: 1.625rem;
+            & > :first-child {
+               --flow-space: .6rem;
+            }
+            & > :last-child {
+               margin-top: 1rem;
+            }
+            
+         }
+      }
+      @media (min-width: 35em) {
+         --flow-space: 3.625rem;
+         & > .numbered-title {
+            justify-self: left;
+         }
+         & > .informations {
+            & > article { 
+               margin-top: 2.75rem;
+            }
+         }
+      }
+      @media (min-width: 45em) {
+         --flow-space: 0 ;
+         row-gap: 1rem;
+         column-gap: 0;
+         justify-items: left;
+         grid-template-columns: minmax(1rem, 1fr) minmax(0, 40rem) minmax(0, 15rem) minmax(1rem, 1fr);
+         grid-template-areas: 
+         ". title title ."
+         ". informations image image"
+         ; 
+
+         & > .informations {
+            padding-right: 1rem;
+            display: flex;
+            .numbers {
+               flex-direction: column;
+               flex-basis: 20%;
+               margin-right: 20px;
+            }
+            & > article { 
+               margin-top: 0rem;
+               & > :last-child {
+                  flex: 1;
+               }
+            }
+         }
+      }
+   }
+}
