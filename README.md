@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://eager-easley-85f589.netlify.app/index.html
+- Live Site URL: https://space-tourisme.netlify.app/
 
 ## My process
 
